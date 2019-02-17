@@ -9,3 +9,6 @@
 
 # VSCode Config
 .vscode/
+
+# Database File
+db.sqlite3
