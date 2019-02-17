@@ -6,3 +6,6 @@
 
 # Static Collection Files
 /.static_root
+
+# VSCode Config
+.vscode/
