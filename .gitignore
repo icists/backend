@@ -1,3 +1,8 @@
+# Cached Files
 *.pyc
+
+# Log Files
 *.out
+
+# Static Collection Files
 /.static_root
