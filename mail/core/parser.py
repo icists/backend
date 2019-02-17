@@ -73,7 +73,7 @@ class ContentParser():
 
     
 if __name__ == "__main__":
-    my_val = {"name" : "Bongjun"}
+    my_val = {"name" : "Bongjun", "age" : "21"}
     ps = ContentParser(test_file, my_val)
     #print(ps._template)
     print(ps.get_content())
