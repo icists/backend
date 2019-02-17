@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 # By running makemigrations, you're telling Django that you've made some changes to your models.
 
 INSTALLED_APPS = [
+    'mail.apps.MailConfig',
     'front.apps.FrontConfig',
     'participant_manager.apps.ParticipantManagerConfig',
     'polls.apps.PollsConfig',

@@ -1,0 +1,7 @@
+{
+    "mail": {
+        "title": "An awesome email",
+        "content": "This email is awesome. Do you like email?",
+        "send-to": "malloc099@gmail.com"
+    }
+}
