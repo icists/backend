@@ -1,0 +1,26 @@
+{
+    "name": "ICISTS",
+    "short_name": "ICISTS",
+    "icons":[
+        {
+            "src": "img/icons/144x.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "img/icons/192x.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/icons/512x.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#0a073c",
+    "theme_color": "#0a073c",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

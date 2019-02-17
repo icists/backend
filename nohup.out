@@ -1,0 +1,355 @@
+[11/Feb/2019 21:47:32] "GET / HTTP/1.1" 200 13
+[11/Feb/2019 21:47:33] "GET / HTTP/1.1" 200 13
+[11/Feb/2019 21:47:34] "GET / HTTP/1.1" 200 13
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:43:51
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 21:51:36] "GET / HTTP/1.1" 200 13
+[11/Feb/2019 21:51:36] "GET / HTTP/1.1" 200 13
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:51:06
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:52:08
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:52:19
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f067a803730>
+Traceback (most recent call last):
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/icists19/urls.py", line 28, in <module>
+    path('polls/', include('polls.urls'))
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/polls/urls.py", line 7
+    path('<int:question_id>/', views.detail, name='detail'),
+       ^
+SyntaxError: invalid syntax
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f5133a25730>
+Traceback (most recent call last):
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/icists19/urls.py", line 28, in <module>
+    path('polls/', include('polls.urls'))
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/polls/urls.py", line 7
+    path('<int:question_id>/', views.detail, name='detail'),
+       ^
+SyntaxError: invalid syntax
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7fe43f00d730>
+Traceback (most recent call last):
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 379, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/management/base.py", line 366, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/registry.py", line 71, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 37, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 526, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/icists19/urls.py", line 28, in <module>
+    path('polls/', include('polls.urls'))
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/tech/anaconda3/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/tech/ICISTS19/icists19/polls/urls.py", line 7
+    path('<int:question_id>/', views.detail, name='detail'),
+       ^
+SyntaxError: invalid syntax
+Performing system checks...
+
+[11/Feb/2019 21:56:26] "GET /polls HTTP/1.1" 301 0
+[11/Feb/2019 21:56:26] "GET /polls/ HTTP/1.1" 200 26
+[11/Feb/2019 21:56:28] "GET /polls/1 HTTP/1.1" 301 0
+[11/Feb/2019 21:56:28] "GET /polls/1/ HTTP/1.1" 200 44
+[11/Feb/2019 21:56:32] "GET /polls/1/results HTTP/1.1" 301 0
+Internal Server Error: /polls/1/results/
+Traceback (most recent call last):
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/tech/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: results() got an unexpected keyword argument 'qeustion_id'
+[11/Feb/2019 21:56:32] "GET /polls/1/results/ HTTP/1.1" 500 65243
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:56:24
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 21:56:47] "GET /polls/1/results/ HTTP/1.1" 200 44
+[11/Feb/2019 21:57:07] "GET /polls/1/vote HTTP/1.1" 301 0
+[11/Feb/2019 21:57:07] "GET /polls/1/vote/ HTTP/1.1" 200 28
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:56:46
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 21:57:31
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:00:27
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:00:30
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:00:34
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:02:21
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:03:52] "GET /polls/1/results/ HTTP/1.1" 200 44
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:03:51
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:03:55
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:04:10] "GET /polls/ HTTP/1.1" 200 18
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:04:05
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:04:22
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:04:38] "GET /polls/ HTTP/1.1" 200 18
+[11/Feb/2019 22:04:39] "GET /polls/ HTTP/1.1" 200 18
+[11/Feb/2019 22:04:40] "GET /polls/ HTTP/1.1" 200 18
+[11/Feb/2019 22:04:41] "GET /polls/ HTTP/1.1" 200 18
+[11/Feb/2019 22:04:41] "GET /polls/ HTTP/1.1" 200 18
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:04:37
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:04:56] "GET /polls/ HTTP/1.1" 200 19
+[11/Feb/2019 22:04:57] "GET /polls/ HTTP/1.1" 200 19
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:04:56
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:05:00] "GET /polls/ HTTP/1.1" 200 19
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:05:00
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:05:04] "GET /polls/ HTTP/1.1" 200 18
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:05:03
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[11/Feb/2019 22:05:09] "GET /polls/ HTTP/1.1" 200 21
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 11, 2019 - 22:05:09
+Django version 2.1.6, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2019 - 11:16:06
+Django version 2.1.7, using settings 'icists19.settings'
+Starting development server at http://127.0.0.1:8080/
+Quit the server with CONTROL-C.
+[13/Feb/2019 11:18:48] "GET / HTTP/1.1" 200 13
+Invalid HTTP_HOST header: 'ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com:8080'. You may need to add 'ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /
+[13/Feb/2019 11:29:00] "GET / HTTP/1.1" 400 62837
+Invalid HTTP_HOST header: 'ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com:8080'. You may need to add 'ec2-54-180-8-50.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[13/Feb/2019 11:29:00] "GET /favicon.ico HTTP/1.1" 400 62958
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2019 - 11:18:46
+Django version 2.1.7, using settings 'icists19.settings'
+Starting development server at http://0:8080/
+Quit the server with CONTROL-C.
+[13/Feb/2019 11:29:53] "GET / HTTP/1.1" 200 13
+Not Found: /favicon.ico
+[13/Feb/2019 11:29:53] "GET /favicon.ico HTTP/1.1" 404 2329

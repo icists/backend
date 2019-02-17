@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="manifest" href="../manifest.json">
+
+	<link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
+	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Secondary Sliding Navigation | CodyHouse</title>
+</head>
+<body>
+	<header>
+		<div class="cd-logo"><a href="/"><img src="../img/logo.png" width="90" alt="Logo"></a></div>
+
+		<nav class="cd-main-nav-wrapper">
+			<ul class="cd-main-nav">
+				<li><a href="/">Notice</a></li>
+				<li><a href="/html/NewsFeed.html">News Feed</a></li>
+				<li><a href="/html/Schedule.html">Schedule</a></li>
+				<li><a href="/html/Survey.html">Survey</a></li>
+				<li><a href="/html/QnA.html">Q&A</a></li>
+				<li><a href="/html/Map.html">Map</a></li>
+				<li>
+					<a href="#0" class="cd-subnav-trigger"><span>Group Pages</span></a>
+
+					<ul>
+						<li class="go-back"><a href="#0">Menu</a></li>
+						<li><a href="/html/Team1-5.html">Team 01~05</a></li>
+						<li><a href="#0">Team 06~10</a></li>
+						<li><a href="#0">Team 11~11</a></li>
+						<li><a href="#0">Team 16~20</a></li>
+						<li><a href="#0">Team 21~25</a></li>
+						<li><a href="#0">Team 26~</a></li>
+						<li><a href="#0" class="placeholder">Placeholder</a></li>
+					</ul>
+				</li>
+			</ul> <!-- .cd-main-nav -->
+		</nav> <!-- .cd-main-nav-wrapper -->
+		
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+	</header>
+	
+	<main class="cd-main-content">
+		<h1>Team1-5</h1>
+	</main>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/main.js"></script> <!-- Resource jQuery -->
+<script>
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('../sw.js')
+		.then(function(success) {
+		console.log('[Service Worker 등록 완료!]', success);
+		})
+		.catch(function(error){
+		console.log('[Service Worker 등록 실패!]', error);
+		});
+	}
+</script>
+</body>
+</html>
