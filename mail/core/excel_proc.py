@@ -63,15 +63,6 @@ class ContactsExcelProc():
 
         return True
 
-class ContentParser():
-    """
-    @functionality
-    - read content template
-    - put args into template
-    """
-    pass
-
-
 
 
 
