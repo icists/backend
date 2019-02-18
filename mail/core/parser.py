@@ -9,6 +9,9 @@ class ParseError(Exception):
     pass
 
 class TokenNotMatchError(ParseError):
+    """
+    Please check tokens. Tokens are not matched normally.
+    """
     pass
 
 class ContentParser():
@@ -71,7 +74,8 @@ class ContentParser():
                 _line = _line.replace(tk, self._values[_tk])
             self._content.append(_line)
 
-    
+
+# For testing.
 if __name__ == "__main__":
     my_val = {"name" : "Bongjun", "age" : "21"}
     ps = ContentParser(test_file, my_val)
