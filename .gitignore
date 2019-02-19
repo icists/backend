@@ -12,3 +12,10 @@
 
 # Database File
 db.sqlite3
+
+/mail/core/token.pickle
+
+*.xlsx
+
+# Security
+mail/interface/credentials.json
