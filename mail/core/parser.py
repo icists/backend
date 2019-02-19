@@ -21,7 +21,7 @@ class ContentParser():
     - put args into template
     """
     
-    def __init__(self, template, values):
+    def __init__(self, template : str, values : dict):
         # Parser Constants
         self.LTOKEN = '{'
         self.RTOKEN = '}'
@@ -77,7 +77,7 @@ class ContentParser():
 
 # For testing.
 if __name__ == "__main__":
-    my_val = {"name" : "Bongjun", "age" : "21"}
+    my_val = {"name" : "Bongjun", "age" : "21", "target" : "마이클 루덴"}
     ps = ContentParser(test_file, my_val)
     #print(ps._template)
     print(ps.get_content())
