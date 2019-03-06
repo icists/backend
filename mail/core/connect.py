@@ -20,18 +20,6 @@ class GMailConnect():
 
         self._login()
         self.service = build('gmail', 'v1', credentials=self.creds)
-
-    def test(self):
-        # For testing, read all labels in the mail account
-        results = self.service.users().labels().list(userId='me').execute()
-        labels = results.get('labels', [])
-
-        if not labels:
-            print('No labels found.')
-        else:
-            print('Labels:')
-            for label in labels:
-                print(label['name'])
     
     def work(self, to, subject, msg_txt):
         _msg = self._create_msg("me", to, subject, msg_txt)

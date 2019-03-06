@@ -73,6 +73,9 @@ class ContentParser():
                 tk = '{' + _tk + '}'
                 _line = _line.replace(tk, self._values[_tk])
             self._content.append(_line)
+    
+    def test(self):
+        return "This is a test message"
 
 
 # For testing.
