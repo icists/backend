@@ -13,6 +13,11 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
+import os
+import json
+from .core.parser import ContentParser
+
+
 class Invitation():
     def __init__(self, row): 
         self.row = row
@@ -29,7 +34,7 @@ class Invitation():
         self.ETC = 9
     
     def is_eng(self):
-        if self.row[self.LANG] == '영':
+        if self.row[self.LANG].value == '영':
             return True
         return False
 
@@ -41,6 +46,9 @@ class Invitation():
     
     def get_sender(self):
         return self.row[self.SENDER].value
+    
+    def get_field(self):
+        return self.row[self.FIELD].value
     
     def get_sentence(self):
         return self.row[self.ONE_SEN].value
@@ -63,13 +71,15 @@ def index(request):
     # load excel file
     excel_file = request.FILES['excel_file']
     wb = openpyxl.load_workbook(excel_file)
-    ws = wb['시트1']
+    ws = wb['Sheet1']
     invitations = parse_excel_file(ws)
     # connect to gmail server
     creds = login()
-    service = build('gamil', 'v1', credentials=creds)
+    service = build('gmail', 'v1', credentials=creds)
 
+    # send mails
     for invi in invitations:
+        print(invi)
         send_mail(invi, service)
     
     return render(request, 'mail/index.html', {'excel_data':invitations})
@@ -84,34 +94,54 @@ def parse_excel_file(worksheet, header=True):
             if i == 0:
                 continue
         # too many Nones.. ignore them
+        is_valid_row = True
         for cell in row:
             if cell.value == None:
                 empty_count += 1
+                is_valid_row = False
                 break
             else:
                 empty_count = 0
                 break
         if empty_count > 3:
             break
-        invitations.append(Invitation(row))
+        if is_valid_row:
+            invitations.append(Invitation(row))
         if empty_count >= 3:
             for _ in range(3):
                 invitations.pop()
     return invitations
 
-def send_mail(invitations, service, user_id='me'):
+def send_mail(invi, service, user_id='me'):
     # create message
-    
+    if invi.is_eng():
+        template = os.path.dirname(os.path.realpath(__file__)) + '/data/eng.json'
+    else:
+        template = os.path.dirname(os.path.realpath(__file__)) + '/data/kor.json'
+    val = {
+        'name': invi.get_name(),
+        'sender': invi.get_sender(),
+        'field': invi.get_field(),
+        'date': invi.get_date(),
+        'one_sen': invi.get_sentence(),
+    }
+    p = ContentParser(template = template, values = val)
+    subject = p.get_title() 
+    print(p.get_title())
+    msg_txt = p.get_content()
+    message = MIMEText(msg_txt, _charset = 'utf-8')
+    message['subject'] = subject
+    message['from'] = user_id
+    message['to'] = invi.get_mail()
     # send message
-    message = (service.users().messages().send(userId=user_id, body=message).execute())
+    # message = (service.users().messages().send(userId=user_id, body=message).execute())
 
 def login():
     SCOPES = ['https://www.googleapis.com/auth/gmail.send']
-
+    creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-
     # Check if the crudential is already stored as pickle
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
@@ -121,9 +151,10 @@ def login():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
+            credential = os.path.dirname(os.path.realpath(__file__)) + '/credentials.json'
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
-            creds = flow.run_local_server()
+                credential, SCOPES)
+            creds = flow.run_local_server(port=8000)
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
