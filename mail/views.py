@@ -127,7 +127,7 @@ def send_mail(invi, service, user_id='me'):
     }
     p = ContentParser(template = template, values = val)
     subject = p.get_title() 
-    print(p.get_title())
+    print('To:' + invi + ', Title: ' + p.get_title())
     msg_txt = p.get_content()
     message = MIMEText(msg_txt, _charset = 'utf-8')
     message['subject'] = subject
