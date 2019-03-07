@@ -12,10 +12,6 @@ from googleapiclient.errors import HttpError
 class GMailConnect():
     def __init__(self):
         
-        """
-        Shows basic usage of the Gmail API.
-        Lists the user's Gmail labels.
-        """
         self.creds = None
 
         self._login()

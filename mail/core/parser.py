@@ -28,12 +28,23 @@ class ContentParser():
 
         _file = open(template, 'r')
         _file = json.load(_file)
+        self._title = _file['title']
         self._template = _file['template']
 
         self._values = values
 
         if self._is_valid_template():
             self._put_values()
+    
+    def get_title(self):
+
+        _vars = self._values.keys()
+        result = self._title
+        for _tk in _vars:
+            tk = '{' + _tk + '}'
+            result = result.replace(tk, self._values[_tk])
+        
+        return result
 
     def get_content(self):
         return '\n'.join(self._content)
