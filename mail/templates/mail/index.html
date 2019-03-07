@@ -1,20 +1,19 @@
 {% load static %}
-
-<head>
-    <meta charset="utf-8">
-    <title>ICISTS Mailing System</title>
-</head>
-<body>
-    <script src="{% static 'mail/js/template.js' %}"></script>
-    <script></script>
-    <form enctype="multipart/form-data" method="post">
-        {% csrf_token %}
-        <!-- Mailing Form -->
-        <input type="file" title="Upload Contacts Excel File" name="excel_file" required="required"> <br>
-        <input type="submit" value="Upload">
-    </form>    
-    <hr>
-    {% for row in excel_data %}
-        {{ row }}<br>
-    {% endfor %}
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ICISTS Mailing System</title>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <!-- Mailing Form -->
+            <input type="file" title="Upload Contacts Excel File" name="excel_file" required="required"> <br>
+            <input type="submit" value="Upload">
+        </form>    
+        <hr>
+        {% for row in excel_data %}
+            {{ row }}<br>
+        {% endfor %}
+    </body>
+</html>

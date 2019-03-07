@@ -79,7 +79,6 @@ def index(request):
 
     # send mails
     for invi in invitations:
-        print(invi)
         send_mail(invi, service)
     
     return render(request, 'mail/index.html', {'excel_data':invitations})
@@ -127,7 +126,7 @@ def send_mail(invi, service, user_id='me'):
     }
     p = ContentParser(template = template, values = val)
     subject = p.get_title() 
-    print('To:' + invi + ', Title: ' + p.get_title())
+    print("To: {:30}\nTitle: {:40}\n".format(str(invi), p.get_content()))
     msg_txt = p.get_content()
     message = MIMEText(msg_txt, _charset = 'utf-8')
     message['subject'] = subject
